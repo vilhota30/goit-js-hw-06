@@ -1,11 +1,18 @@
-const validatorEl = document.querySelector('#validation-input');
-const bodyEl = document.body;
-validatorEl.addEventListener("click", () => {
-    validatorEl.focus()
-})
+const inputText = document.getElementById('validation-input');
 
-// bodyEl.addEventListener("click", () => {
-//     validatorEl.blur()
-// })
+inputText.addEventListener('blur', addBorderColor);
+const dataLength = inputText.getAttribute('data-length');
 
+function addBorderColor(event) {
+    const valueLength = event.target.value.trim().length;
 
+    if (Number(dataLength) === valueLength) {
+        
+        inputText.classList.add('valid');
+        inputText.classList.remove('invalid');
+    }
+    else {
+        inputText.classList.add('invalid');
+        inputText.classList.remove('valid');
+    }
+}

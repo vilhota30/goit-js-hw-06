@@ -15,13 +15,13 @@ const counter = {
 
 decrementBtn.addEventListener('click', function () {
     counter.decrement();
-    console.log(counter);
+    
     valueEl.textContent = counter.value;
 });
 
 incremenBtn.addEventListener('click', function () {
     counter.increment();
-    console.log(counter);
+   
     valueEl.textContent = counter.value;
 }); 
 

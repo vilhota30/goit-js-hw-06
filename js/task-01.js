@@ -5,8 +5,7 @@ const listItemEl = categoriesEL.children.length;
 console.log("Number of categories: ", listItemEl);
 
 
-// const titleEl = document.querySelectorAll("h2");
-// console.log("Category: ", ...titleEl);
+
 
 
 itemEL.forEach(item => {

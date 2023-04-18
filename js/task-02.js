@@ -5,37 +5,55 @@ const ingredients = [
   'Tomatos',
   'Herbs',
   'Condiments',
+  'Bread',
+  'Cheese',
 ];
 
 
-const ingredientsEl = document.querySelector('#ingredients');
+const ingredientsListEl = document.querySelector('#ingredients');
 
-const liIngredientsEl = document.createElement('li');
-liIngredientsEl.classList.add('item');
-liIngredientsEl.textContent = 'Potatoes';
+// const markup = ingredients
+//   .map((ingredient) => `<li class="item">${ingredient}</li>`)
+//   .join('');
 
-const mushroomsEl = document.createElement('li');
-mushroomsEl.classList.add('item');
-mushroomsEl.textContent = 'Mushrooms';
-
-const garlicEl = document.createElement('li');
-garlicEl.classList.add('item');
-garlicEl.textContent = 'Garlic';
+// ingredientsListEl.insertAdjacentHTML("beforeend", markup);
 
 
-const tomatosEl = document.createElement('li');
-tomatosEl.classList.add('item');
-tomatosEl.textContent = 'Tomatos';
+for (let i = 0; i < ingredients.length; i += 1) {
+  const liIngredientsEl = document.createElement('li');
+  liIngredientsEl.classList.add('item');
+  liIngredientsEl.textContent = ingredients[i];
+  ingredientsListEl.append(liIngredientsEl);
+}
 
 
-const herbsEl = document.createElement('li');
-herbsEl.classList.add('item');
-herbsEl.textContent = 'Herbs';
+// const liIngredientsEl = document.createElement('li');
+// liIngredientsEl.classList.add('item');
+// liIngredientsEl.textContent = 'Potatoes';
+
+// const mushroomsEl = document.createElement('li');
+// mushroomsEl.classList.add('item');
+// mushroomsEl.textContent = 'Mushrooms';
+
+// const garlicEl = document.createElement('li');
+// garlicEl.classList.add('item');
+// garlicEl.textContent = 'Garlic';
 
 
-const condimentsEl = document.createElement('li');
-condimentsEl.classList.add('item');
-condimentsEl.textContent = 'Condiments';
+// const tomatosEl = document.createElement('li');
+// tomatosEl.classList.add('item');
+// tomatosEl.textContent = 'Tomatos';
 
 
-ingredientsEl.append(liIngredientsEl, mushroomsEl, garlicEl, tomatosEl, herbsEl, condimentsEl);
+// const herbsEl = document.createElement('li');
+// herbsEl.classList.add('item');
+// herbsEl.textContent = 'Herbs';
+
+
+// const condimentsEl = document.createElement('li');
+// condimentsEl.classList.add('item');
+// condimentsEl.textContent = 'Condiments';
+
+
+// ingredientsEl.append(liIngredientsEl, mushroomsEl, garlicEl, tomatosEl, herbsEl, condimentsEl);
+

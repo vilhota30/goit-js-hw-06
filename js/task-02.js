@@ -7,6 +7,7 @@ const ingredients = [
   'Condiments',
   'Bread',
   'Cheese',
+  'Milk'
 ];
 
 
@@ -18,13 +19,14 @@ const ingredientsListEl = document.querySelector('#ingredients');
 
 // ingredientsListEl.insertAdjacentHTML("beforeend", markup);
 
-
+ const readyLiIngredient = [];
 for (let i = 0; i < ingredients.length; i += 1) {
   const liIngredientsEl = document.createElement('li');
   liIngredientsEl.classList.add('item');
   liIngredientsEl.textContent = ingredients[i];
-  ingredientsListEl.append(liIngredientsEl);
+  readyLiIngredient.push(liIngredientsEl);
 }
+ingredientsListEl.append(...readyLiIngredient);
 
 
 // const liIngredientsEl = document.createElement('li');
